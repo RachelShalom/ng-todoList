@@ -1,5 +1,5 @@
+import { TodoListService } from './../todo-list.service';
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'todo-list-manager',
   template:`<div class="todo-app">
@@ -15,16 +15,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListManagerComponent implements OnInit {
     secondaryTitle = "Our MoinWorld and ngGrils";
-    todoList = [{ title: "complete angular todo-list project" }]
+    todoList;
 
     addTodo(newTodo: string): void {
-        this.todoList.push({ title: newTodo });
+        this.todoLsitService.addItem(newTodo);
     }
 
 
-  constructor() { }
+  constructor(private todoLsitService: TodoListService) { }
 
   ngOnInit() {
+      this.todoList=this.todoLsitService.getTodoList();
   }
 
 }
