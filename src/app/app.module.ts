@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { InputButtonUnitComponent } from './input-button-unit/input-button-unit.component';
+import { ItemComponent } from './item/item.component';
 // this is a decorator. everything that starts with an @ is a decorator for example, 
 //NgModule receives the AppModule class and adds to it methods 
 //and members that later on will be used by Angular. 
@@ -10,7 +11,8 @@ import { InputButtonUnitComponent } from './input-button-unit/input-button-unit.
 @NgModule({
   declarations: [
     AppComponent,
-    InputButtonUnitComponent
+    InputButtonUnitComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule
