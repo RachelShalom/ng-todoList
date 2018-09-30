@@ -1,5 +1,5 @@
+import { ItemComponent } from './../item/item.component';
 import {Component, OnInit }from '@angular/core'; 
-
 @Component( {
 selector:'app-input-button-unit', 
 template:` 
@@ -10,7 +10,7 @@ template:`
   (keyup.enter)="addTodo($event.target.value)">
 <button (click)="addTodo(inputElementRef.value)">Save</button>
 <ul>
-<li *ngFor= "let todo of todoList">{{todo.title}}</li>
+<li *ngFor= "let todo of todoList"><todo-item [itemTitle]="todo"></todo-item></li>
 </ul>
 `, 
 styleUrls:['./input-button-unit.component.css']
