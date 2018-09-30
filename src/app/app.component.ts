@@ -1,7 +1,7 @@
 import { ListManagerComponent } from './list-manager/list-manager.component';
 import { Component } from '@angular/core';
 @Component({
-  selector: 'todo-root',
+  selector: 'todo-app',
     template: `<todo-list-manager></todo-list-manager>`,
   styleUrls: ['./app.component.css']
 })

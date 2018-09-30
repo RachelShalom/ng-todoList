@@ -2,7 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'todo-item',
-  template: `{{itemTitle.title}}`,
+  template: `
+  <div class="todo-item">
+    {{itemTitle.title}}
+  </div>`,
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
