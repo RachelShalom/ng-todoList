@@ -1,6 +1,6 @@
+import { TodoListStorageService } from './todo-list-storage.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { InputButtonUnitComponent } from './input-button-unit/input-button-unit.component';
 import { ItemComponent } from './item/item.component';
@@ -20,7 +20,7 @@ import { TodoListService } from './todo-list.service';
   imports: [
     BrowserModule
   ],
-  providers: [TodoListService],
+  providers: [TodoListService, TodoListStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

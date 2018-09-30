@@ -20,8 +20,6 @@ export class ListManagerComponent implements OnInit {
     addTodo(newTodo: string): void {
         this.todoLsitService.addItem(newTodo);
     }
-
-
   constructor(private todoLsitService: TodoListService) { }
 
   ngOnInit() {
