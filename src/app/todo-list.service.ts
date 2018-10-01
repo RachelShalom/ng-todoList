@@ -11,7 +11,8 @@ export class TodoListService {
   getTodoList(){
       return this.storage.get() 
   }
-  addItem(item): void{
-      this.storage.post({title:item})
+  addItem(item){
+      return this.storage.post({title:item})
+      
   }
 }

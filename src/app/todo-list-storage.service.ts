@@ -15,10 +15,11 @@ export class TodoListStorageService {
     private todoList;
 
   constructor() {
-    this.todoList = JSON.parse(localStorage.getItem(storageName)) || defaultList;
+    this.todoList = JSON.parse(localStorage.getItem(storageName)) ;
    }
    //get an item
    get(){
+    console.log([...this.todoList])
     return [...this.todoList];
    }
    //add a new item
