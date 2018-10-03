@@ -5,6 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   template: `
   <div class="todo-item">
     {{itemTitle.title}}
+    <button class= btn btn-red (click)="removeItem()">delete</button>
   </div>`,
   styleUrls: ['./item.component.css']
 })
